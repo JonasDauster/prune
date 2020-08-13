@@ -122,4 +122,5 @@ for i in range(len(Ori)):
 
 print(score/len(Ori))
 df=pd.DataFrame(rnndf)
+#this contains the lines with the sequences searched for
 df.to_csv("/working2/rcug_lw/pythonProjects/mistgabel/Jonas/to_check.csv",index=False)
