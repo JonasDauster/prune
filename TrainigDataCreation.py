@@ -26,13 +26,11 @@ def slidingWindow(sequence, winSize, step=1):
     # Do the work
     for i in range(0, int(numOfChunks) * step, step):
         yield sequence[i:i + winSize]
-
-#/working2/rcug_lw/mistgabel_resources/training/train_500_reads_per_bam.fastq
+        
 
 def positive(filepath):
     rlist1 = []
     fastq_sequences = SeqIO.parse(open(filepath), 'fastq')
-    # df = pd.DataFrame(columns=['A', 'B', 'C'])
     for fastq in fastq_sequences:
         sequence = str(fastq.seq)
         rlist1.append(sequence)
