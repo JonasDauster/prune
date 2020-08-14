@@ -78,4 +78,4 @@ for x in range(200):
 
 insert_df = pd.DataFrame(sequence,label,columns=["sequence"])
 print(insert_df)
-insert_df.to_csv("inserted_test.csv")
+insert_df.to_csv("inserted.csv")
