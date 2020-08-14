@@ -18,8 +18,6 @@ df['sequence'] = df.apply(lambda x: wrap(x['sequence'], kmer_size), axis=1)
 #to ensure keras one_hot encodes always the same
 # when starting script a Hash seed should be set so that the output is the same over mulitple files , set to fixed seed when starting via PHYTONSEED=0 and than phyton3 and programm
 
-
-# labels = df[['seq_label']].values.tolist()
 print(df.dtypes)
 print(df['seq_label'].value_counts().sort_index())
 
