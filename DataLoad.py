@@ -12,7 +12,9 @@ from keras.preprocessing.text import one_hot
 import pandas as pd
 from keras.preprocessing import sequence
 
-# load and preprocess#
+# load and preprocess
+# if you want to load real data it should before go through the same process as training data
+# an seperated file for that will be added shortly
 df = pd.read_csv("inserted_test.csv")
 #df.insert(2, 'New_ID', range(1, 1 + len(df)))
 print(df['sequence'])
