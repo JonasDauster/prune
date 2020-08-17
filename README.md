@@ -7,8 +7,6 @@ Uses the Keras Libary for neural network creation to filter specific sequences f
 
 Provide a txt file containing the seqeunces to be serached for and a fastq as your background
 
-Steps
-
 ### Preparation
 
 1. Clone or copy the files, one easy way to do this is git clone https://github.com/JonasDauster/prune
@@ -20,7 +18,7 @@ Steps
 4.Install all requiered packages, i recommend conda for that ( all python 3 versions should work fine )
 
 ### Training
-1. Change the files in TrainingDataGeneration.py accordingly and run it
+1. Change the files in TrainingDataCreation.py accordingly and run it
 
 2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  __PYTHONHASHSEED=6 python3 nameoffile.py__ . You can use any number behind PYTHONHASHSEED= , just choose the same when running the next steps.
 
