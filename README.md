@@ -24,4 +24,4 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 
 ### Testing/Running
 
-1.
+1. Run TestDataPreperation.py
