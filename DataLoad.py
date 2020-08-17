@@ -16,7 +16,7 @@ from keras.preprocessing import sequence
 # if you want to load real data it should before go through the same process as training data
 # an seperated file for that will be added shortly
 df = pd.read_csv("inserted_test.csv")
-#df.insert(2, 'New_ID', range(1, 1 + len(df)))
+df.columns = ['seq_label','sequence']
 print(df['sequence'])
 Ori = df['sequence'].tolist()
 Orilabel = df["seq_label"].tolist()
