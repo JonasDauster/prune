@@ -11,6 +11,7 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 
 ### System
 Linux : use a the command line to create a conda envoirement and also clone the repo , than the files can easily be run with <code> PYTHONHASHSEED= </code>  parameter
+
 Windows : i used anacondas Powershell prompt which lets you use all your packages. You can also install git on anaconda so git clone will work as well on the powershell. Just run the Programms via python. Hashseedfixing via <code> $env:PYTHONHASHSEED= </code> and a number
 
 ### Preparation
