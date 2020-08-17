@@ -4,6 +4,8 @@ from keras.models import Sequential
 import tensorflow as tf
 import os
 from Bio import SeqIO
+from keras.preprocessing.text import text_to_word_sequence
+from keras.preprocessing.text import one_hot
 from keras.preprocessing import sequence
 
 # load and preprocess
