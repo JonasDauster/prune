@@ -10,9 +10,12 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 Steps
 
 Preparation
-1.Provide a set of normal, clean sequences that do not contain the sequences you want to search for or simply your  (as fastq, for reference see example data)
-2.Provide the sequences you want to search for (as txt, for reference see example data) 
-3.Install all requiered packages, i recommend conda for that ( all python 3 versions should work fine )
+1. Clone or copy the files, easy way is git clone https://github.com/JonasDauster/prune
+2.Provide a set of normal, clean sequences that do not contain the sequences you want to search for or simply your  (as fastq, for reference see example data)
+3.Provide the sequences you want to search for (as txt, for reference see example data) 
+4.Install all requiered packages, i recommend conda for that ( all python 3 versions should work fine )
 
 Training
-1.
+1. Change the files in TrainingDataGeneration.py accordingly and run it
+2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  PYTHONHASHSEED=6 python3 nameoffile.py . You can use any number behind PYTHONHASHSEED= , just choose the same when running the next steps.
+3.
