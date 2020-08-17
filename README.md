@@ -22,7 +22,7 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 ### Training
 1. Change the files in TrainingDataCreation.py accordingly and run it
 
-2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  <code> PYTHONHASHSEED=6 python3 CNN.py </code> . You can use any number behind <code> PYTHONHASHSEED= </code> , just choose the same when running the next steps.
+2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  <code> PYTHONHASHSEED=6 python3 CNN.py </code> . You can use any number behind <code> PYTHONHASHSEED= </code> , just choose the same when running the next steps. In Windows the same can be achived using <code> $env:PYTHONHASHSEED=6 </code> for example
 
 ### Testing/Running
 
