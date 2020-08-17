@@ -21,7 +21,7 @@ Change the Input files in the scripts accordingly, also check the
 ### Training
 1. Change the files in TrainingDataCreation.py accordingly and run it
 
-2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  <code> PYTHONHASHSEED=6 python3 CNN.py </code> . You can use any number behind PYTHONHASHSEED= , just choose the same when running the next steps.
+2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  <code> PYTHONHASHSEED=6 python3 CNN.py </code> . You can use any number behind <code> PYTHONHASHSEED= </code> , just choose the same when running the next steps.
 
 ### Testing/Running
 
