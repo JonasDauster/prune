@@ -11,7 +11,7 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 
 ### Preparation
 
-1. Clone or copy the files, one easy way to do this is git clone https://github.com/JonasDauster/prune
+1. Clone or copy the files, one easy way to do this is <code> git clone https://github.com/JonasDauster/prune </code>
 
 2. Provide a set of normal, clean sequences that do not contain the sequences you want to search for or simply your  (as fastq, for reference see example data)
 
