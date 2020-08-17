@@ -41,7 +41,7 @@ sequence=[]
 label=[]
 positive_list = positive("NCFB_D_MG000106_2020_R1.fastq")
 for x in range(len(positive_list)):
-    to insert = positive_list[x]       
+    to_insert = positive_list[x]       
     #to_insert = random.choice(positive_list)
     # if you want to draw random lines from the file and test them change to_insert to the above line
     sequence.append(to_insert)
