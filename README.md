@@ -6,6 +6,7 @@ Uses the Keras Libary for neural network creation to filter specific sequences f
 # Usage
 
 Provide a txt file containing the seqeunces to be serached for and a fastq as your background
+Change the Input files in the scripts accordingly, also check the 
 
 ### Preparation
 
@@ -20,10 +21,10 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 ### Training
 1. Change the files in TrainingDataCreation.py accordingly and run it
 
-2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  __PYTHONHASHSEED=6 python3 CNN.py__ . You can use any number behind PYTHONHASHSEED= , just choose the same when running the next steps.
+2. Do the same with CNN.py, but before you let it run fix the python hash seed. One easy way(with linux) is to use this setup with an command line interface:  <code> PYTHONHASHSEED=6 python3 CNN.py </code> . You can use any number behind PYTHONHASHSEED= , just choose the same when running the next steps.
 
 ### Testing/Running
 
 1. For testing either generate a new training file and run it with DataLoad.py (use the same hashseed as for CNN.py) or use the validation_split method built in keras. 
 
-2.For running on data to classify
+2. For running on data to classify, prepare the Data with TestDataPrep.py . Than run DataLoad.py on the 
