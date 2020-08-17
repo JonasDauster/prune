@@ -86,14 +86,6 @@ train_numpy = pd.DataFrame(df['sequence_cut1'].values.tolist()).values
 #train_numpybig = pd.DataFrame(df['sequence'].values.tolist()).values
 train_numpybig = df["sequence"].values
 train_numpybig  = sequence.pad_sequences(train_numpybig,max_lengthtest,padding='post',truncating='post')
-#with np.printoptions(threshold=np.inf):
-   # print(train_numpybig, file=open('testout','a'))
-print(target_softmax)
-print(train_numpy)
-print(train_numpybig)
-print(train_numpybig[1])
-print(train_numpybig[1][1])
-print(train_numpybig[1:2])
 
 # load model
 from tensorflow import keras
@@ -108,7 +100,6 @@ print(prediction)
 rnndf = []
 score = 0
 for i in range(len(Ori)):
-    print(Orilabel[i])
     print(Ori[i])
     print('%s => %d' % (train_numpybig[i].tolist(), prediction[i].argmax()))
     print(prediction[i])
@@ -116,12 +107,12 @@ for i in range(len(Ori)):
         score=score+1
     if prediction[i].argmax() == 0:
         rnndf.append(Ori[i])
-    if prediction[i][prediction[i].argmax()] > 0.7:
-        print(prediction[i].argmax())
+         print("found something")
     else:
-        print("no contamination")
+        print("nothing found")
 
 
+#only if correct labels are provided
 print(score/len(Ori))
 df=pd.DataFrame(rnndf)
 #this contains the lines with the sequences searched for
