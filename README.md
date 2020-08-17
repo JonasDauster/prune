@@ -11,11 +11,11 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 
 1. Clone or copy the files, one easy way to do this is git clone https://github.com/JonasDauster/prune
 
-2.Provide a set of normal, clean sequences that do not contain the sequences you want to search for or simply your  (as fastq, for reference see example data)
+2. Provide a set of normal, clean sequences that do not contain the sequences you want to search for or simply your  (as fastq, for reference see example data)
 
-3.Provide the sequences you want to search for (as txt, for reference see example data)
+3. Provide the sequences you want to search for (as txt, for reference see example data)
 
-4.Install all requiered packages, i recommend conda for that ( all python 3 versions should work fine )
+4. Install all requiered packages, i recommend conda for that ( all python 3 versions should work fine )
 
 ### Training
 1. Change the files in TrainingDataCreation.py accordingly and run it
