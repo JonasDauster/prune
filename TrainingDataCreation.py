@@ -53,7 +53,7 @@ label=[]
 #folder with your normal/backround sequences
 positive_list = positive("train_5000_reads_per_bam.fastq")
 #change to get more or less training data 
-sample_number = 200
+sample_number = 400
 
 for x in range(sample_number):
     r_file = random.choice(filelist)
