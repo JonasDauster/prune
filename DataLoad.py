@@ -108,10 +108,10 @@ for i in range(len(Ori)):
         score=score+1
     if prediction[i].argmax() == 0:
         rnndf.append(Ori[i])
-         print("found something")
+        print("found something")
     if prediction[i].argmax() == 1:
         rnn_nodf.append(Ori[i])
-         print("nothing found")
+        print("nothing found")
     else:
         print("nothing found")
 
