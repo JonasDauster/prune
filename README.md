@@ -24,4 +24,6 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 
 ### Testing/Running
 
-1. Run TestDataPreperation.py
+1. For testing either generate a new training file and run it with DataLoad.py (use the same hashseed as for CNN.py) or use the validation_split method built in keras. 
+
+2.For running on data to classify
