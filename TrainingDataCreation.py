@@ -52,7 +52,10 @@ sequence=[]
 label=[]
 #folder with your normal/backround sequences
 positive_list = positive("train_5000_reads_per_bam.fastq")
-for x in range(200):
+#change to get more or less training data 
+sampel_number = 200
+
+for x in range(sample_number):
     r_file = random.choice(filelist)
     lines = open(r_file).read().strip().split('\n')
     to_insert = random.choice(positive_list)
