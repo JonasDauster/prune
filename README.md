@@ -5,8 +5,9 @@ Uses the Keras Libary for neural network creation to filter specific sequences f
 
 # Usage
 
-Provide a txt file containing the seqeunces to be serached for and a fastq as your background
-Change the Input files in the scripts accordingly, also check the 
+Provide a txt file containing the seqeunces to be serached for and a fastq as your background.
+
+<i> Change the Input files in the scripts accordingly </i> 
 
 ### Preparation
 
