@@ -44,14 +44,14 @@ def findFiles(path): return glob.glob(path)
 
 filelist = []
 
-#folder with your seqeunces to identify
-for file in findFiles('/working2/rcug_lw/pythonProjects/mistgabel/Jonas/pytorch/Nextera/*.txt'):
+#folder with your seqeunces to identify ( example in example data) loads all txt files in folder so multiple can be given
+for file in findFiles('Nextera/*.txt'):
     filelist.append(file)
 
 sequence=[]
 label=[]
 #folder with your normal/backround sequences
-positive_list = positive("/working2/rcug_lw/mistgabel_resources/training/train_5000_reads_per_bam.fastq")
+positive_list = positive("train_5000_reads_per_bam.fastq")
 for x in range(200):
     r_file = random.choice(filelist)
     lines = open(r_file).read().strip().split('\n')
@@ -76,4 +76,5 @@ for x in range(200):
 
 insert_df = pd.DataFrame(sequence,label,columns=["sequence"])
 print(insert_df)
+# file for the neural network
 insert_df.to_csv("inserted.csv")
