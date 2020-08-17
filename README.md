@@ -28,4 +28,8 @@ Provide a txt file containing the seqeunces to be serached for and a fastq as yo
 
 1. For testing either generate a new training file and run it with DataLoad.py (use the same hashseed as for CNN.py) or use the validation_split method built in keras. 
 
-2. For running on data to classify, prepare the Data with TestDataPrep.py . Than run DataLoad.py on the prepared Data, without proper labels you can ignore the score. The found seqeunces can be found in network_hits.csv, the clean ones in no_hits.csv
+2. For running on data to classify, prepare the data with TestDataPrep.py . Than run DataLoad.py on the prepared data, without proper labels you can ignore the score. The found seqeunces can be found in network_hits.csv, the clean ones in no_hits.csv
+
+### Performance Issues
+- do not use more than about 10 individual seqeunces for training, use less for better results
+- do not use too short fragments, i would recommend at least 12 bases long kmers
