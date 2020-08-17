@@ -11,8 +11,11 @@ Steps
 
 Preparation
 1. Clone or copy the files, easy way is git clone https://github.com/JonasDauster/prune
+
 2.Provide a set of normal, clean sequences that do not contain the sequences you want to search for or simply your  (as fastq, for reference see example data)
-3.Provide the sequences you want to search for (as txt, for reference see example data) 
+
+3.Provide the sequences you want to search for (as txt, for reference see example data)
+
 4.Install all requiered packages, i recommend conda for that ( all python 3 versions should work fine )
 
 Training
