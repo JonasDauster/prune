@@ -7,6 +7,7 @@ from keras.preprocessing import sequence
 
 # load and preprocess#
 df = pd.read_csv("inserted.csv")
+df.columns = ['seq_label','sequence']
 print(df['sequence'])
 from textwrap import wrap
 
