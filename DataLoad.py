@@ -98,6 +98,7 @@ model.summary()
 prediction = model.predict(train_numpybig)
 print(prediction)
 rnndf = []
+rnn_nodf = []
 score = 0
 for i in range(len(Ori)):
     print(Ori[i])
@@ -108,6 +109,9 @@ for i in range(len(Ori)):
     if prediction[i].argmax() == 0:
         rnndf.append(Ori[i])
          print("found something")
+    if prediction[i].argmax() == 1:
+        rnn_nodf.append(Ori[i])
+         print("nothing found")
     else:
         print("nothing found")
 
@@ -115,5 +119,8 @@ for i in range(len(Ori)):
 #only if correct labels are provided
 print(score/len(Ori))
 df=pd.DataFrame(rnndf)
-#this contains the lines with the sequences searched for
+df_no = pd.DataFrame(rnn_nodf)
+#file contains the lines with the sequences searched for
 df.to_csv("network_hits.csv",index=False)
+#file contains the others
+df_no.to_csv("no_hits.csv",index=False)
