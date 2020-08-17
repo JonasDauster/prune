@@ -45,13 +45,13 @@ def findFiles(path): return glob.glob(path)
 filelist = []
 
 #folder with your seqeunces to identify ( example in example data) loads all txt files in folder so multiple can be given
-for file in findFiles('Nextera/*.txt'):
+for file in findFiles('Example Data/*.txt'):
     filelist.append(file)
 
 sequence=[]
 label=[]
 #folder with your normal/backround sequences
-positive_list = positive("train_5000_reads_per_bam.fastq")
+positive_list = positive("Example Data/train_500_reads_per_bam.fastq")
 #change to get more or less training data 
 sample_number = 400
 
