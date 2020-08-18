@@ -25,12 +25,10 @@ def slidingWindow(sequence, winSize, step=1):
     for i in range(0, int(numOfChunks) * step, step):
         yield sequence[i:i + winSize]
 
-#/working2/rcug_lw/mistgabel_resources/training/train_500_reads_per_bam.fastq
 
 def positive(filepath):
     rlist1 = []
     fastq_sequences = SeqIO.parse(open(filepath), 'fastq')
-    # df = pd.DataFrame(columns=['A', 'B', 'C'])
     for fastq in fastq_sequences:
         sequence = str(fastq.seq)
         rlist1.append(sequence)
@@ -38,6 +36,7 @@ def positive(filepath):
 
 sequence=[]
 label=[]
+# enter the fastq you want to filter in the lines below, two times
 positive_list = positive("NCFB_1000_seqs.fastq")
 records = list(SeqIO.parse("NCFB_1000_seqs.fastq", "fastq"))
 for x in range(len(positive_list)):
@@ -139,8 +138,6 @@ for i in range(len(Ori)):
         rnndf.append(Ori[i])
     if prediction[i].argmax() == 1:
         newrecord.append(records[i])
-    if prediction[i][prediction[i].argmax()] > 0.7:
-        print(prediction[i].argmax())
     else:
         print("no contamination")
 
@@ -149,5 +146,7 @@ print(score/len(Ori))
 df=pd.DataFrame(rnndf)
 print(newrecord)
 print(records)
+# fastq without serached for seqeunce
 SeqIO.write(newrecord, "example.fastq", "fastq")
-df.to_csv("/working2/rcug_lw/pythonProjects/mistgabel/Jonas/to_testcheck.csv",index=False)
+# all lines containig the searched for seqeunce
+df.to_csv("/working2/rcug_lw/pythonProjects/mistgabel/Jonas/to_check.csv",index=False)
