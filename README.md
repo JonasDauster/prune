@@ -38,3 +38,6 @@ Windows : i used anacondas Powershell prompt which lets you use all your package
 ### Performance Issues
 - do not use more than about 10 individual seqeunces for training, use less for better results
 - do not use too short fragments, i would recommend at least 12 bases long kmers
+
+
+## Further Methods
