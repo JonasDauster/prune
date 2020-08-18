@@ -24,4 +24,5 @@ for chunck in mutate_list("CTGTCTCTTATACACATCT",3):
 
 print(len(chunck_list))
 df = pd.DataFrame(chunck_list)
-df.to_csv("Mutated.csv")
+#before this can be used as a new query the head line has to be removed and the file has to be renamed to a txt
+df.to_csv("Mutated.csv",index=False)
