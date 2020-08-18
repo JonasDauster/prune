@@ -17,6 +17,8 @@ def mutate_list(dna,space):
 
 
 chunck_list = []
+#change number for distance form start and end where the mutaded seqeunces begin
+# with 3 it is CTG TCTCTTATACACA TCT this middle part
 for chunck in mutate_list("CTGTCTCTTATACACATCT",3):
     chunck_list.append(chunck)
 
