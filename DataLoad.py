@@ -58,7 +58,7 @@ target_softmax = dummy_y
 
 from sklearn.utils import class_weight
 print(df.head(100))
-#max_lengthtest can be used insted of max_length to cut fragments shorter than the longest one
+#max_lengthtest can be used insted of max_length in pad_sequences to cut fragments shorter than the longest one
 max_lengthtest = 150
 train_numpybig = df["sequence"].values
 train_numpybig  = sequence.pad_sequences(train_numpybig,max_length,padding='post',truncating='post')
