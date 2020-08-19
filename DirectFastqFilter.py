@@ -76,7 +76,6 @@ kmer_size = 1
 df['sequence'] = df.apply(lambda x: wrap(x['sequence'], kmer_size), axis=1)
 df['sequence'] = [','.join(map(str, l)) for l in df['sequence']]
 max_length = df.sequence.map(lambda x: len(x)).max()
-print(max_length)
 max_length = max_length/kmer_size
 df['sequence'] = df.apply(lambda x: text_to_word_sequence(x['sequence'], split=','), axis=1)
 df['sequence'] = df['sequence'].astype(str)
@@ -96,11 +95,10 @@ encoded_Y = encoder_label.transform(Y)
 dummy_y = np_utils.to_categorical(encoded_Y)
 
 target_softmax = dummy_y
-
-print(df.head(100))
+# set max_lengthtest in pad_seqeunces for a fixed length
 max_lengthtest = 150
 train_numpybig = df["sequence"].values
-train_numpybig  = sequence.pad_sequences(train_numpybig,max_lengthtest,padding='post',truncating='post')
+train_numpybig  = sequence.pad_sequences(train_numpybig,max_length,padding='post',truncating='post')
 
 print(target_softmax)
 print(train_numpybig)
