@@ -91,7 +91,8 @@ for i in range(len(Ori)):
 
 
 #only if correct labels are provided
-print(score/len(Ori))
+print("Score")
+print((score/len(Ori))*100)
 df=pd.DataFrame(rnndf)
 df_no = pd.DataFrame(rnn_nodf)
 #file contains the lines with the sequences searched for
