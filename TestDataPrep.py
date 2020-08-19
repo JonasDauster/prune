@@ -39,6 +39,7 @@ def positive(filepath):
 
 sequence=[]
 label=[]
+# insert your fastq to test here
 positive_list = positive("NCFB_D_MG000106_2020_R1.fastq")
 for x in range(len(positive_list)):
     to_insert = positive_list[x]       
@@ -55,4 +56,5 @@ for x in range(len(positive_list)):
 
 insert_df = pd.DataFrame(sequence,label,columns=["sequence"])
 print(insert_df)
+# data ready to be classified via DataLoad.py, a reference is found in example data
 insert_df.to_csv("real_data.csv")
