@@ -38,6 +38,7 @@ Windows : i used anacondas Powershell prompt which lets you use all your package
 ### Performance Issues
 - do not use more than about 10 individual seqeunces for training, use less for better results
 - do not use too short fragments, i would recommend at least 12 bases long kmers
+- watch out that your reads are all about the same length, harsh indifferences lead to bad training. If the fastq you want to search has a diffrent length than the ones the network was trained with consider setting max_lengthtest in the scripts to get a fixed length
 
 
 ## Further Methods
