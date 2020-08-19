@@ -42,7 +42,6 @@ Y = dataset[:,0]
 encoder_label = LabelEncoder()
 encoder_label.fit(Y)
 encoded_Y = encoder_label.transform(Y)
-print(encoded_Y)
 dummy_y = np_utils.to_categorical(encoded_Y)
 
 target_softmax = dummy_y
