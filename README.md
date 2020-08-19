@@ -41,5 +41,5 @@ Windows : i used anacondas Powershell prompt which lets you use all your package
 
 
 ## Further Methods
-- to also spot mutations of a given fragment the script Mutated.py can be used to generate mutations. These are your new query seqeunces for training
+- to also spot mutations of a given fragment, the script Mutated.py can be used to generate mutations. The generated txt is than used for training.
 - to directly get a fastq rid of the given seqeunce, DirectFastqFilter.py can be used. 
