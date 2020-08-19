@@ -23,6 +23,8 @@ for chunck in mutate_list("CTGTCTCTTATACACATCT",3):
     chunck_list.append(chunck)
 
 print(len(chunck_list))
-df = pd.DataFrame(chunck_list)
-#before this can be used as a new query the head line has to be removed and the file has to be renamed to a txt
-df.to_csv("Mutated.csv",index=False)
+#mutated seqeuence for new adapter creation and training
+f=open('Mutated.txt','w')
+w='\n'.join(chunck_list)
+f.write(w)
+f.close()
