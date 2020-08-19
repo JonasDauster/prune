@@ -36,7 +36,9 @@ def positive(filepath):
 
 sequence=[]
 label=[]
+#
 # enter the fastq you want to filter in the lines below, two times
+#
 positive_list = positive("NCFB_1000_seqs.fastq")
 records = list(SeqIO.parse("NCFB_1000_seqs.fastq", "fastq"))
 for x in range(len(positive_list)):
@@ -58,8 +60,6 @@ insert_df.to_csv("test_test.csv")
 from keras.preprocessing.text import text_to_word_sequence
 from keras.preprocessing.text import one_hot
 import pandas as pd
-# fix random seed for reproducibility
-#np.random.seed(5)
 from keras.preprocessing import sequence
 
 # load and preprocess
@@ -74,14 +74,7 @@ from textwrap import wrap
 kmer_size = 1
 #cut to kmers
 df['sequence'] = df.apply(lambda x: wrap(x['sequence'], kmer_size), axis=1)
-
-print(df.dtypes)
-print(df['sequence'])
-print(df['seq_label'].value_counts().sort_index())
-
 df['sequence'] = [','.join(map(str, l)) for l in df['sequence']]
-print("possible Form")
-print(df.head(100))
 max_length = df.sequence.map(lambda x: len(x)).max()
 print(max_length)
 max_length = max_length/kmer_size
@@ -97,11 +90,9 @@ from keras.utils import np_utils
 from sklearn.preprocessing import LabelEncoder
 dataset = df.values
 Y = dataset[:,0]
-print(Y)
 encoder_label = LabelEncoder()
 encoder_label.fit(Y)
 encoded_Y = encoder_label.transform(Y)
-print(encoded_Y)
 dummy_y = np_utils.to_categorical(encoded_Y)
 
 target_softmax = dummy_y
@@ -141,12 +132,10 @@ for i in range(len(Ori)):
     else:
         print("no contamination")
 
-
-print(score/len(Ori))
+print("Score")
+print((score/len(Ori))*100)
 df=pd.DataFrame(rnndf)
-print(newrecord)
-print(records)
 # fastq without serached for seqeunce
 SeqIO.write(newrecord, "example.fastq", "fastq")
 # all lines containig the searched for seqeunce
-df.to_csv("/working2/rcug_lw/pythonProjects/mistgabel/Jonas/to_check.csv",index=False)
+df.to_csv("to_fastqcheck.csv",index=False)
