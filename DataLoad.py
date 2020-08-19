@@ -33,7 +33,6 @@ df['sequence'] = [','.join(map(str, l)) for l in df['sequence']]
 print("possible Form")
 print(df.head(100))
 max_length = df.sequence.map(lambda x: len(x)).max()
-print(max_length)
 max_length = max_length/kmer_size
 df['sequence'] = df.apply(lambda x: text_to_word_sequence(x['sequence'], split=','), axis=1)
 df['sequence'] = df['sequence'].astype(str)
@@ -50,20 +49,19 @@ from keras.utils import np_utils
 from sklearn.preprocessing import LabelEncoder
 dataset = df.values
 Y = dataset[:,0]
-print(Y)
 encoder_label = LabelEncoder()
 encoder_label.fit(Y)
 encoded_Y = encoder_label.transform(Y)
-print(encoded_Y)
 dummy_y = np_utils.to_categorical(encoded_Y)
 
 target_softmax = dummy_y
 
 from sklearn.utils import class_weight
 print(df.head(100))
+#max_lengthtest can be used insted of max_length to cut fragments shorter than the longest one
 max_lengthtest = 150
 train_numpybig = df["sequence"].values
-train_numpybig  = sequence.pad_sequences(train_numpybig,max_lengthtest,padding='post',truncating='post')
+train_numpybig  = sequence.pad_sequences(train_numpybig,max_length,padding='post',truncating='post')
 
 # load model
 from tensorflow import keras
