@@ -47,7 +47,7 @@ dummy_y = np_utils.to_categorical(encoded_Y)
 target_softmax = dummy_y
 
 from sklearn.utils import class_weight
-#can be used for fixed length shorter than the longest fragment
+#max_lengthtest can be used for fixed length,repleace max_length in pad_sequences
 max_lengthtest = 150
 train_numpybig = df["sequence"].values
 train_numpybig  = sequence.pad_sequences(train_numpybig,max_length,padding='post',truncating='post')
