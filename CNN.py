@@ -9,6 +9,7 @@ from keras.preprocessing.text import one_hot
 from keras.preprocessing import sequence
 
 # load and preprocess
+# insert here the csv created via TrainingDataCreation.py
 df = pd.read_csv("inserted.csv")
 df.columns = ['seq_label','sequence']
 print(df['sequence'])
