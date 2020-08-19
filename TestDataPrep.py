@@ -55,4 +55,4 @@ for x in range(len(positive_list)):
 
 insert_df = pd.DataFrame(sequence,label,columns=["sequence"])
 print(insert_df)
-insert_df.to_csv("test.csv")
+insert_df.to_csv("real_data.csv")
