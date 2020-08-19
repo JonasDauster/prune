@@ -13,8 +13,7 @@ import pandas as pd
 from keras.preprocessing import sequence
 
 # load and preprocess
-# if you want to load real data it should before go through the same process as training data
-# an seperated file for that will be added shortly
+# insert the data you want the network to classify here
 df = pd.read_csv("real_data.csv")
 df.columns = ['seq_label','sequence']
 print(df['sequence'])
@@ -26,10 +25,6 @@ from textwrap import wrap
 kmer_size = 1
 #cut to kmers
 df['sequence'] = df.apply(lambda x: wrap(x['sequence'], kmer_size), axis=1)
-
-#to ensure keras one_hot encodes always the same
-# when starting script a Hash seed should be set so that the output is the same over mulitple files , set to fixed seed above
-# labels = df[['seq_label']].values.tolist()
 print(df.dtypes)
 print(df['sequence'])
 print(df['seq_label'].value_counts().sort_index())
@@ -74,8 +69,6 @@ train_numpybig  = sequence.pad_sequences(train_numpybig,max_lengthtest,padding='
 from tensorflow import keras
 model = keras.models.load_model('modelconv.h5')
 model.summary()
-#scores = model.evaluate(train_numpybig,target_softmax, verbose=0)
-#print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
 
 
 prediction = model.predict(train_numpybig)
