@@ -61,7 +61,7 @@ print(df.head(100))
 #max_lengthtest can be used insted of max_length in pad_sequences to cut fragments shorter than the longest one
 max_lengthtest = 150
 train_numpybig = df["sequence"].values
-train_numpybig  = sequence.pad_sequences(train_numpybig,max_length,padding='post',truncating='post')
+train_numpybig  = sequence.pad_sequences(train_numpybig,int(max_length),padding='post',truncating='post')
 
 # load model
 from tensorflow import keras
