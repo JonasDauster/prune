@@ -50,7 +50,7 @@ from sklearn.utils import class_weight
 #max_lengthtest can be used for fixed length,repleace max_length in pad_sequences
 max_lengthtest = 150
 train_numpybig = df["sequence"].values
-train_numpybig  = sequence.pad_sequences(train_numpybig,max_length,padding='post',truncating='post')
+train_numpybig  = sequence.pad_sequences(train_numpybig,int(max_length),padding='post',truncating='post')
 print(target_softmax)
 print(train_numpybig)
 
