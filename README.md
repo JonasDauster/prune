@@ -22,7 +22,7 @@ Windows : i used anacondas Powershell prompt which lets you use all your package
 
 3. Provide the sequences you want to search for (as txt, for reference see example data)
 
-4. Install all requiered packages, i recommend conda for that ( all python 3 versions should work fine )
+4. Install all requiered packages, i recommend conda for that (keras,tensorflow,pandas,biopython all python 3 versions should work fine )
 
 ### Training
 1. Change the files in TrainingDataCreation.py accordingly and run it
